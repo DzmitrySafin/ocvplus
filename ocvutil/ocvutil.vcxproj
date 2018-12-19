@@ -99,6 +99,11 @@
   <ItemGroup>
     <Image Include="..\images\rubikscube.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ocvapi\ocvapi.vcxproj">
+      <Project>{6efc45cb-7366-4314-ae69-eabe6cb2bd2f}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -2,7 +2,6 @@
 // Microsoft Visual C++ generated include file.
 // Used by ocvutil.rc
 //
-#define IDB_BITMAP1                     101
 #define IDB_BITMAP_CUBE                 101
 
 // Next default values for new objects
