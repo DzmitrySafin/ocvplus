@@ -37,10 +37,22 @@ int main(int argc, const char * argv[])
     cv::Mat imgGray;
     cv::cvtColor(imgOriginal, imgGray, cv::COLOR_BGR2GRAY);
 
-    cv::namedWindow("window");
-    cv::imshow("window", imgGray);
+    //cv::Mat imgBlur;
+    //cv::pyrDown(imgGray, imgBlur, cv::Size(5, 5));
+    //cv::pyrUp(imgBlur, imgGray, cv::Size(5, 5));
+    //cv::blur(imgGray, imgGray, cv::Size(11, 11));
+    //cv::GaussianBlur(imgGray, imgGray, cv::Size(11, 11), 0);
+    //cv::medianBlur(imgGray, imgGray, 11);
+    //cv::bilateralFilter(imgGray, imgGray, 11, 22, 5);
+
+    cv::Mat imgCanny;
+    cv::Canny(imgGray, imgCanny, 10, 100);
+
+    const std::string winName = "window";
+    cv::namedWindow(winName);
+    cv::imshow(winName, imgCanny);
     cv::waitKey();
-    cv::destroyWindow("window");
+    cv::destroyWindow(winName);
 
     return 0;
 }
